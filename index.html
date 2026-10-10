@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHOP SIKANEON SCRIPTER</title>
+<style>
+:root{
+  --yellow:#ffd21a;
+  --yellow2:#ffea70;
+  --black:#080808;
+  --card:#111111;
+  --line:#2b2b2b;
+  --text:#fff;
+  --muted:#b8b8b8;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{
+  margin:0;background:radial-gradient(circle at 50% 0%,#242000 0,#0b0b0b 35%,#050505 100%);
+  color:var(--text);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden
+}
+a{text-decoration:none;color:inherit}
+header{
+  position:sticky;top:0;z-index:20;background:rgba(5,5,5,.94);
+  border-bottom:1px solid #242424;backdrop-filter:blur(12px)
+}
+.nav{
+  max-width:1100px;margin:auto;padding:18px 22px;display:flex;align-items:center;
+  justify-content:space-between;gap:20px
+}
+.logo{font-size:24px;font-weight:900;letter-spacing:.5px;color:var(--yellow)}
+.logo span{color:white}
+nav{display:flex;gap:24px}
+nav a{color:#ddd;font-weight:700;font-size:14px}
+nav a:hover{color:var(--yellow)}
+.menu{display:none;border:1px solid #333;background:#111;color:white;border-radius:14px;padding:10px 14px;font-size:22px}
+.hero{max-width:1100px;margin:auto;text-align:center;padding:88px 22px 80px}
+.badge{
+  display:inline-block;padding:10px 17px;border:1px solid #5d5200;border-radius:999px;
+  color:var(--yellow2);background:rgba(255,210,26,.07);font-weight:800;letter-spacing:2px;font-size:13px
+}
+h1{font-size:clamp(45px,8vw,88px);line-height:.98;margin:25px 0 22px;font-weight:950;letter-spacing:-3px}
+h1 .yellow{color:var(--yellow);text-shadow:0 0 28px rgba(255,210,26,.25)}
+.hero p{max-width:720px;margin:auto;color:#bdbdbd;font-size:18px;line-height:1.7}
+.buttons{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:32px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;padding:15px 25px;border-radius:13px;
+  font-weight:900;border:1px solid var(--yellow);transition:.2s
+}
+.btn.primary{background:var(--yellow);color:#050505;box-shadow:0 0 25px rgba(255,210,26,.18)}
+.btn.secondary{background:#111;color:white;border-color:#3a3a3a}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+section{max-width:1100px;margin:auto;padding:70px 22px}
+.section-title{text-align:center;font-size:38px;margin:0 0 12px}
+.section-sub{text-align:center;color:#999;margin:0 auto 38px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  background:linear-gradient(145deg,#151515,#0c0c0c);border:1px solid #292929;border-radius:20px;
+  padding:25px;box-shadow:0 12px 35px rgba(0,0,0,.25)
+}
+.card:hover{border-color:#756500}
+.icon{font-size:35px}.card h3{margin:15px 0 8px}.card p{color:#999;line-height:1.6}
+.price{color:var(--yellow);font-weight:900;margin:18px 0}
+.small-btn{display:inline-block;padding:11px 16px;border-radius:10px;background:#191919;border:1px solid #3b3b3b;color:white;font-weight:800}
+.small-btn:hover{border-color:var(--yellow);color:var(--yellow)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.step{text-align:center;padding:22px;border:1px solid #252525;border-radius:18px;background:#0e0e0e}
+.num{color:var(--yellow);font-size:28px;font-weight:950}
+.join{
+  text-align:center;border:1px solid #554900;background:linear-gradient(135deg,#171500,#0d0d0d);
+  border-radius:24px;padding:45px 22px;box-shadow:0 0 50px rgba(255,210,26,.07)
+}
+.join h2{font-size:34px;margin:0 0 10px}.join p{color:#aaa}
+footer{border-top:1px solid #242424;text-align:center;padding:35px 20px;color:#888}
+footer b{color:var(--yellow)}
+.float{
+  position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;background:var(--yellow);color:#050505;
+  font-size:25px;font-weight:900;box-shadow:0 0 30px rgba(255,210,26,.3);z-index:10
+}
+@media(max-width:760px){
+  nav{display:none}.menu{display:block}
+  .grid,.steps{grid-template-columns:1fr}
+  .hero{padding-top:65px}.hero p{font-size:16px}
+  section{padding:55px 18px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a class="logo" href="#home">⚡ <span>SHOP</span> SIKANEON</a>
+    <nav>
+      <a href="#home">Home</a><a href="#services">Services</a><a href="#pricing">Pricing</a>
+      <a href="#order">How to Order</a><a href="#join">Channel</a>
+    </nav>
+    <a class="btn primary" href="https://wa.me/62895329886692?text=Halo%20SIKANEON%2C%20saya%20ingin%20order." target="_blank" rel="noopener">ORDER NOW</a>
+    <button class="menu" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="badge">⚡ SIKANEON • SCRIPTER • GAMING</div>
+  <h1><span class="yellow">SHOP SIKANEON</span><br> SCRIPTER</h1>
+  <p>Temukan layanan dan kebutuhan gaming SIKANEON dengan tampilan sederhana, cepat, dan nyaman digunakan. Semua informasi order dibuat jelas dan mudah diakses.</p>
+  <div class="buttons">
+    <a class="btn primary" href="#services">VIEW SERVICES</a>
+    <a class="btn secondary" href="#join">JOIN CHANNEL</a>
+  </div>
+</section>
+
+<section id="services">
+  <h2 class="section-title">🎮 SERVICES</h2>
+  <p class="section-sub">Layanan SIKANEON dengan tema baru kuning & hitam.</p>
+  <div class="grid">
+    <article class="card"><div class="icon">🥚</div><h3>Steal a Egg Boosting</h3><p>Auto Steal Egg • Auto Event • Auto Trade</p><div class="price">Mulai 15K / hari</div><a class="small-btn" href="https://wa.me/62895329886692?text=Halo%20SIKANEON%2C%20saya%20ingin%20order." target="_blank" rel="noopener">ORDER</a></article>
+    <article class="card"><div class="icon">🎮</div><h3>Roblox Boosting</h3><p>Berbagai kebutuhan boosting Roblox sesuai layanan yang tersedia.</p><div class="price">Harga sesuai layanan</div><a class="small-btn" href="https://wa.me/62895329886692?text=Halo%20SIKANEON%2C%20saya%20ingin%20order." target="_blank" rel="noopener">ORDER</a></article>
+    <article class="card"><div class="icon">⛏️</div><h3>Roblox SAE Boosting</h3><p>Boosting sesuai kebutuhan dan target order.</p><div class="price">Mulai 15K / hari</div><a class="small-btn" href="https://wa.me/62895329886692?text=Halo%20SIKANEON%2C%20saya%20ingin%20order." target="_blank" rel="noopener">ORDER</a></article>
+  </div>
+</section>
+
+<section id="pricing">
+  <h2 class="section-title">💰 PRICING</h2>
+  <p class="section-sub">Referensi fee Middleman.</p>
+  <div class="grid">
+    <div class="card"><h3>1K – 5K</h3><div class="price">Fee 1K</div></div>
+    <div class="card"><h3>6K – 49K</h3><div class="price">Fee 2K</div></div>
+    <div class="card"><h3>50K – 100K</h3><div class="price">Fee 5K</div></div>
+    <div class="card"><h3>101K – 249K</h3><div class="price">Fee 10K</div></div>
+  </div>
+</section>
+
+<section id="order">
+  <h2 class="section-title">📋 HOW TO ORDER</h2>
+  <p class="section-sub">Order dengan langkah sederhana.</p>
+  <div class="steps">
+    <div class="step"><div class="num">01</div><h3>Pilih layanan</h3><p>Tentukan layanan yang kamu butuhkan.</p></div>
+    <div class="step"><div class="num">02</div><h3>Hubungi admin</h3><p>Tekan tombol order untuk menghubungi admin.</p></div>
+    <div class="step"><div class="num">03</div><h3>Kirim detail</h3><p>Berikan detail order yang diperlukan.</p></div>
+    <div class="step"><div class="num">04</div><h3>Tunggu proses</h3><p>Admin memberikan informasi proses order.</p></div>
+  </div>
+</section>
+
+<section id="join">
+  <div class="join">
+    <h2>📢 JOIN SALURAN SIKANEON</h2>
+    <p>Mau mendapatkan informasi dan update terbaru? Tekan tombol JOIN di bawah.</p>
+    <a class="btn primary" href="https://whatsapp.com/channel/0029VbCBOVzCxoB2TNKHPN0t" target="_blank" rel="noopener">JOIN SEKARANG</a>
+  </div>
+</section>
+</main>
+
+<footer>⚡ <b>SHOP SIKANEON SCRIPTER</b><br>Gaming & Scripter Services • © 2026</footer>
+<a class="float" href="https://whatsapp.com/channel/0029VbCBOVzCxoB2TNKHPN0t" target="_blank" rel="noopener" aria-label="Join Channel">➤</a>
+</body>
+</html>
